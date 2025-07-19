@@ -1,0 +1,17 @@
+@use "typography";
+
+$white: #fff;
+$black: #000;
+$gray600: #717fa6;
+$purple500: #766cf1;
+$blue950: #1f2e55;
+$blue700: #382ae1;
+$blue150: #d6e1ff;
+$blue100: #e0e8ff;
+$blue50: #f7f9ff;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
