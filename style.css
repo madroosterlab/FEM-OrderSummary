@@ -1,4 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+body .card h1 {
+  font-family: "Red Hat Display";
+  font-size: 28px;
+  line-height: 135%;
+  font-weight: 900;
+}
+
+body .card-content .plan-card .text .annual, body .card-content .button, body .card-content .cancel {
+  font-family: "Red Hat Display";
+  font-size: 16px;
+  line-height: 165%;
+  font-weight: 900;
+}
+
+body .card-content .plan-card .change {
+  font-family: "Red Hat Display";
+  font-size: 16px;
+  line-height: 165%;
+  font-weight: 700;
+}
+
+body .card-content .plan-card .text .price, body .card p {
+  font-family: "Red Hat Display";
+  font-size: 16px;
+  line-height: 165%;
+  font-weight: 500;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -22,20 +50,73 @@ body .wave1 {
   position: absolute;
   background-color: #d6e1ff;
   height: 100px;
-  top: 270px;
+  top: 35vh;
   z-index: 10;
-  width: 50vw;
+  width: 40vw;
   border-radius: 50%;
 }
 body .wave2 {
   position: absolute;
   background-color: #e0e8ff;
   height: 100px;
-  top: 270px;
+  top: 35vh;
   right: 0;
   z-index: 10;
-  width: 50vw;
+  width: 40vw;
   border-radius: 50%;
+}
+body .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 354px;
+  height: 386px;
+  margin: 48px auto;
+}
+body .card-content .plan-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f7f9ff;
+  width: 354px;
+  height: 98px;
+}
+body .card-content .plan-card .plan-w-img {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+body .card-content .plan-card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 45px;
+}
+body .card-content .plan-card .text .annual {
+  color: #1f2e55;
+}
+body .card-content .plan-card .text .price {
+  color: #717fa6;
+}
+body .card-content .plan-card .change {
+  color: #382ae1;
+}
+body .card-content .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  height: 50px;
+  background-color: #382ae1;
+  border-radius: 11px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+body .card-content .cancel {
+  text-align: center;
+  text-decoration: none;
+  color: #717fa6;
 }
 body .card {
   position: absolute;
@@ -48,12 +129,40 @@ body .card {
   background-color: #fff;
   border-radius: 20px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+body .card h1 {
+  color: #1f2e55;
+}
+body .card p {
+  color: #717fa6;
+}
+body .card h1,
+body .card p {
+  text-align: center;
 }
 body .card img {
   border-radius: 20px 20px 0 0;
+}
+
+@media (max-width: 500px) {
+  body .card,
+  body .hero-img {
+    width: 375px;
+  }
+  body .card .plan-w-img img {
+    width: 48px;
+    height: 48px;
+  }
+  body .card-content .button:hover {
+    background-color: #766cf1;
+  }
+  body .card-content .cancel:hover {
+    color: #1f2e55;
+  }
+  body .card-content .change:hover {
+    color: #766cf1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

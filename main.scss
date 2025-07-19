@@ -31,23 +31,93 @@ body {
     position: absolute;
     background-color: $blue150;
     height: 100px;
-    top: 270px;
+    top: 35vh;
     z-index: 10;
-    width: 50vw;
+    width: 40vw;
     border-radius: 50%;
   }
   .wave2 {
     position: absolute;
     background-color: $blue100;
     height: 100px;
-    top: 270px;
+    top: 35vh;
     right: 0;
     z-index: 10;
-    width: 50vw;
+    width: 40vw;
     border-radius: 50%;
   }
-
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 354px;
+    height: 386px;
+    margin: 48px auto;
+    .plan-card {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: $blue50;
+      width: 354px;
+      height: 98px;
+      .plan-w-img {
+        display: flex;
+        justify-content: space-between;
+        width: 150px;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 45px;
+        .annual {
+          color: $blue950;
+          @extend %text-3;
+        }
+        .price {
+          color: $gray600;
+          @extend %text-3-medium;
+        }
+      }
+      .change {
+        @extend %text-3-bold;
+        color: $blue700;
+      }
+    }
+    .button {
+      @extend %text-3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      width: 100%;
+      height: 50px;
+      background-color: $blue700;
+      border-radius: 11px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .cancel {
+      @extend %text-3;
+      text-align: center;
+      text-decoration: none;
+      color: $gray600;
+    }
+  }
   .card {
+    h1 {
+      color: $blue950;
+      @extend %text-1;
+    }
+    p {
+      color: $gray600;
+      @extend %text-3-medium;
+    }
+    h1,
+    p {
+      text-align: center;
+    }
     position: absolute;
     top: 50%;
     left: 50%;
@@ -58,11 +128,35 @@ body {
     background-color: $white;
     border-radius: 20px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     img {
       border-radius: 20px 20px 0 0;
+    }
+  }
+}
+@media (max-width: 500px) {
+  body {
+    .card,
+    .hero-img {
+      width: 375px;
+    }
+    .card {
+      .plan-w-img img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+    .card-content {
+      .button:hover {
+        background-color: $purple500;
+      }
+      .cancel:hover {
+        color: $blue950;
+      }
+      .change:hover {
+        color: $purple500;
+      }
     }
   }
 }
