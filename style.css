@@ -73,6 +73,15 @@ body .card-content {
   height: 386px;
   margin: 48px auto;
 }
+body .card-content .button:hover {
+  background-color: #766cf1;
+}
+body .card-content .cancel:hover {
+  color: #1f2e55;
+}
+body .card-content .change:hover {
+  color: #766cf1;
+}
 body .card-content .plan-card {
   display: flex;
   justify-content: space-around;
@@ -153,15 +162,6 @@ body .card img {
   body .card .plan-w-img img {
     width: 48px;
     height: 48px;
-  }
-  body .card-content .button:hover {
-    background-color: #766cf1;
-  }
-  body .card-content .cancel:hover {
-    color: #1f2e55;
-  }
-  body .card-content .change:hover {
-    color: #766cf1;
   }
 }
 
